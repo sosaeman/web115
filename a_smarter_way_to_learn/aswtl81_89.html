@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en">
+  <head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" type="text/css" href="../styles/aswtl.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	    <!-- googlefonts-->
+	 <link href='https://fonts.googleapis.com/css?family=Black+Ops+One|Luckiest+Guy|Sonsie+One|Shojumaru&effect=3d|3d-float|anaglyph|brick-sign|canvas-print|
+            crackle|decaying|destruction|distressed|distressed-wood|emboss|fire|fire-animation|fragile|grass|ice|mitosis|neon|outline|putting-green|
+            scuffed-steel|shadow-multiple|splintered|static|stonewash|vintage|wallpaper' 
+            rel='stylesheet' type='text/css'>
+	   <title>
+			Table of content Page 81-89
+	   </title>
+	   <script>
+	function popup80()
+	{
+	var testpop= window.open("","","height=100px,width=100px")
+	if(testpop===null)
+	{
+	alert("disable pop up blocker");
+	}
+	else alert("no pop up blocker detected")
+	testpop.close();
+	}
+	function form82()
+	{
+	if(document.getElementById("lastname82").value.length===0)
+	{
+	alert("enter last name")
+	document.getElementById("lastname82").focus();
+	document.getElementById("lastname82").style.background="yellow";
+	return false;
+	}
+	}
+	function popup83()
+	{
+	if(document.getElementById("states").selectedIndex===0)
+	{
+	alert("select a state")
+	return false;
+	
+	}
+	else alert("form submitted")
+	}
+	function popup84()
+	{
+	var radios= document.getElementsByName("r1");
+	for(var i=0;i<radios.length;i++)
+		{
+		if(radios[i].checked)
+			{
+			return true;
+			}
+		}
+		alert("please check one");
+		return false;
+	}
+	function form85()
+	{
+	 var num= document.getElementById("zip").value.length;
+	 if(num<5)
+		{
+		alert("enter a 5 digit zipcode")
+		return false;
+		}
+	}
+	function form86()
+	{
+	var mail= document.getElementById("email").value.length;
+	if(mail===0)
+		{
+		alert("enter email");
+		return false;
+		}
+	}
+	function window87()
+	{
+	try	
+		{
+		var hello="welcome";
+		aler(hello);
+		}
+		catch(err)
+		{
+			alert(err);
+		}
+	}
+	function form88()
+	{
+	try	
+		{
+		var lastname=document.getElementById("lastname88").value;
+		if(lastname.length===0)
+			{
+			throw"enter lastname"
+			}
+		}
+		catch(err)
+		{
+			alert(err);
+		}
+	}
+	function window89()
+	{	
+	var b1= document.getElementById("window89");
+	var mess=alert("handleing event with javascript");
+	 b1.onclick=mess;
+	}
+		</script>
+  </head>
+  <body>
+    <header>
+		<h1>WEB 115</h1>
+		<h2>A Smarter Way To Learn Chapters 81-89</h2>
+	</header>
+	<main>
+		<div>
+		<table id = "content">
+		<tr>
+			<th>Chapter</th>
+			<th colspan="2">Examples</th>
+		</tr>
+  <tr>
+    <td>81. Browser control: Testing for popup blockers</td>
+    <td><br>
+	<input type="button"value ="check for popup blocker"onclick="popup80();"></td>
+	<td>
+<pre>
+function popup80()
+	{
+	var testpop= window.open("","","height=100px,width=100px")
+	if(testpop===null)
+	{
+	alert("disable pop up blocker");
+	}
+	else alert("no pop up blocker detected")
+	testpop.close();
+	}
+</pre>
+	</td>
+  </tr>
+  <tr>
+    <td>82. Form validation: text fields</td>
+    <td>
+	<form onsubmit="return form82();">
+	<input type="text"   placeholder="lastname " id="lastname82">
+	<input type="submit"   value="submit form">
+	</form>
+	</td>
+	<td>
+<pre>
+function form82()
+	{
+	if(document.getElementById("lastname82").value.length===0)
+	{
+	alert("enter last name")
+	document.getElementById("lastname82").focus();
+	document.getElementById("lastname82").style.background="yellow";
+	return false;
+	}
+	}
+</pre>
+	</td>
+  </tr>
+  <tr>
+    <td>83. Form validation: drop-downs</td>
+    <td>
+	<form onsubmit="return popup83();">
+		<select id="states">
+			<option value="" selected="selected">Select a state</option>
+			<option value="nc">nc</option>
+			<option value="sc">sc</option>
+			<option value="atl">atl</option>
+			<input type="submit" value="submit form">
+		</select>
+	</form>
+	<td>
+	<pre>
+function popup83()
+	{
+	if(document.getElementById("states").selectedIndex===0)
+	{
+	alert("select a state")
+	return false;
+	
+	}
+	}
+	 </pre>
+	</td>
+  </tr>
+  <tr>
+    <td>84. Form validation: radio buttons</td>
+    <td>
+	<form onsubmit="return popup84();">
+		<input type="radio" name="r1" value="cat">cat
+		<input type="radio" name="r1" value="hat">hat
+		<input type="radio" name="r1" value="bat">bat
+		<input type="submit" value="submit form">
+	</form>
+	<td>
+<pre>
+function popup84()
+	{
+	var radios= document.getElementsByName("r1");
+	for(var i=0;i<radios.length;i++)
+		{
+		if(radios[i].checked)
+			{
+			return true;
+			}
+		}
+		alert("please check one");
+		return false;
+	}
+</pre>
+	</td>
+  </tr>
+  <tr>
+    <td>85. Form validation: ZIP codes</td>
+    <td>
+	<form onsubmit="return form85();">
+		<input type="text"   placeholder="zipcode " id="zip">
+		<input type="submit"   value="submit form">
+	</form>
+	</td>
+	</td>
+	<td>
+<pre>
+function form85()
+	{
+	 var num= document.getElementById("zip").value.length;
+	 if(num<5)
+		{
+		alert("enter a 5 digit zipcode")
+		return false;
+		}
+	}
+</pre>
+	</td>
+  </tr>
+  <tr>
+    <td>86. Form validation: email</td>
+    <td>
+	<form onsubmit="return form86();">
+		<input type="text"   placeholder="email" id="email">
+		<input type="submit"   value="submit form">
+	</form>
+	</td>
+	<td>
+<pre>
+function form86()
+	{
+	var mail= document.getElementById("email").value.length;
+	if(mail===0)
+		{
+		alert("enter email");
+		return false;
+		}
+	}
+</pre>
+	</td>
+  </tr>
+  <tr>
+    <td>87. Exceptions: try and catchtd>
+    <td><br><input id="i87" value="find error"type="button" onclick = "window87();"  >
+	</td>
+	<td>
+<pre>
+function window87()
+	{
+	try	
+		{
+		var hello="welcome";
+		aler(hello);
+		}
+		catch(err)
+		{
+			alert(err);
+		}
+	}
+	</td>
+  </tr>
+  <tr>
+    <td>88. Exceptions: throw</td>
+    <td >
+	<form onsubmit="return form88();">
+	<input type="text"   placeholder="lastname " id="lastname88">
+	<input type="submit"   value="submit form">
+	</form>
+	</td>
+	<td>
+	<pre>
+	function form88()
+	{
+	try	
+		{
+		var lastname=document.getElementById("lastname88").value;
+		if(lastname.length===0)
+			{
+			throw"enter lastname"
+			}
+		}
+		catch(err)
+		{
+			alert(err);
+		}
+	}
+	</pre>
+	</td>
+  </tr>
+  <tr>
+    <td>89. Handle events within JavaScript</td>
+    <td><input id="window89" value="click here" type="button"   >
+	</td>
+	<td>
+<pre>
+function window89()
+	{	
+	var b1= document.getElementById("window89");
+	var mess=alert("handleing event with javascript");
+	 b1.onclick=mess;
+	}
+	</td>
+  </tr>
+</table>
+		
+		</div>
+	</main>
+
+   <footer>
+     <br/>Designed by &copy;Emmannuel Sosa
+       <br/>
+		<a href="http://validator.w3.org/check?uri=referer" target="blank">
+			<img class="validator" src="../images/html5.png" alt="html5_validator"/>
+		</a>
+		<a href="http://jigsaw.w3.org/css-validator/check/referer" target="blank">
+			<img class="validator" src="../images/css3.png" alt="css_validator"/>
+		</a>
+   </footer>
+   </body>
+</html>

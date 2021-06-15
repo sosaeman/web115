@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+  <head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" type="text/css" href="../styles/aswtl.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	    <!-- googlefonts-->
+	 <link href='https://fonts.googleapis.com/css?family=Black+Ops+One|Luckiest+Guy|Sonsie+One|Shojumaru&effect=3d|3d-float|anaglyph|brick-sign|canvas-print|
+            crackle|decaying|destruction|distressed|distressed-wood|emboss|fire|fire-animation|fragile|grass|ice|mitosis|neon|outline|putting-green|
+            scuffed-steel|shadow-multiple|splintered|static|stonewash|vintage|wallpaper' 
+            rel='stylesheet' type='text/css'>
+	   <title>
+			Table of content Page 51-60
+	   </title>
+	   <script>
+	   function expandparagraph()
+	   {
+		var paragraph ="Lorem Ipsum: usage. Lorem ipsum is a pseudo-Latin text used in web design for mock-ups.";		
+		document.getElementById("para").innerHTML= paragraph;	
+	   }
+	   function hidepic()
+	   {
+		document.getElementById("on").style.display= "none";
+	   }
+	   function swappic()
+	   {
+		var pic = document.getElementById("beforpic");
+		pic.src="../images/emmanuelheadshot-reduced.jpg";
+	   }
+	   function sizechange()
+	   {
+	    var size = document.getElementById("beforpic");
+		 size.style.width="50px";
+	   }
+	   function colorchange()
+	   {
+		var color= document.getElementById("title");
+		color.style.color="red";
+		
+	   }
+	   function columnchange()
+	   {
+	   var col = document.getElementsByTagName("td");
+	 for (var i = 0; i < col.length; i++) {
+		col[i].style.color = "red";
+	}
+	  }
+	  function rowchange()
+	  {
+	   var table =  document.getElementById("content");
+	   var row = table.getElementsByTagName("tr");
+	    for (var i = 0; i < row.length; i++) 
+		{
+		row[i].style.color = "red";
+		
+		}
+	  }
+	  function child()
+	  {
+	  var tr = document.getElementById("row10");
+	  var td = tr.childNodes[3];
+	  td.style.fontSize="2em";
+	  }
+		</script>
+  </head>
+  <body>
+    <header>
+		<h1>WEB 115</h1>
+		<h2>A Smarter Way To Learn Chapters 51-60</h2>
+	</header>
+	<main>
+		<div>
+		<table id = "content">
+		<tr>
+			<th>Chapter</th>
+			<th colspan="2">Examples</th>
+		</tr>
+  <tr>
+    <td>51. Reading and setting paragraph text</td>
+    <td><p id = "para">Lorem Ipsum: usage. Lorem ipsum is a pseudo text. It's a convenient tool for mock-ups.
+			<a href="javascript:void(0);" onclick="expandparagraph();">click for more</a></p><br></td>
+	<td>
+<pre>
+
+			&lta href="javascript:void(0);" onclick="expandparagraph();">click for more&lt/a>
+function expandparagraph()
+	   {
+		var paragraph ="Lorem Ipsum: usage. Lorem ipsum is a pseudo-Latin text used in web design for mock-ups.";		
+		document.getElementById("para").innerHTML= paragraph;	
+	   }
+</pre>
+	</td>
+  </tr>
+  <tr>
+    <td>52. Manipulating images and text</td>
+    <td> Click on the pic to hide it<img src="../images/stone_fist.jpg" id = "on"onclick="hidepic();"></td>
+	<td>
+<pre>
+&ltimg src="../images/stone_fist.jpg" id = "on"onclick="hidepic();">
+ function hidepic()
+	   {
+		document.getElementById("on").style.display= "none";
+	   }
+</pre>
+	</td>
+  </tr>
+  <tr>
+    <td>53. Swapping images</td>
+    <td>mouseover to change pic<img src="../images/stone_fist.jpg" onmouseover="src='../images/stone.jpg'" onmouseout="src='../images/stone_fist.jpg'"></td>
+	<td>
+&lt;img src="../images/stone_fist.jpg" onmouseover="src='../images/stone.jpg'" onmouseout="src='../images/stone_fist.jpg'">
+	</td>
+  </tr>
+  <tr>
+    <td>54. Swapping images and setting classes</td>
+    <td><img src="../images/stone_fist.jpg" id="beforpic"><input type="button" value="change pic" onclick="swappic();">
+	<input type="button" value="change size" onclick="sizechange();"></td>
+	<td>
+<pre>
+ function swappic()
+	   {
+		var pic = document.getElementById("beforpic");
+		pic.src="../images/emmanuelheadshot-reduced.jpg";
+	   }
+	   function sizechange()
+	   {
+	    var size = document.getElementById("beforpic");
+		 size.style.width="50px";
+	   }
+</pre>
+	</td>
+  </tr>
+  <tr>
+    <td id = "title">55. Setting styles</td>
+    <td><input type="button" value="change title" onclick="colorchange();"><br></td>
+	<td>
+<pre>
+ function colorchange()
+	   {
+		var color= document.getElementById("title");
+		color.style.color="red"
+		
+	   }
+</pre>
+	</td>
+  </tr>
+  <tr>
+    <td>56. Target all elements by tag name</td>
+    <td><input value="click "type = "button" onclick ="columnchange();">
+	<p id = "tags">change color to red</p></td>
+	<td>
+<pre>
+&lt;function columnchange()
+	   {
+	   var col = document.getElementsByTagName("td");
+	 for (var i = 0; i < col.length; i++) {
+		col[i].style.color = "red";
+	}
+	  }
+</pre>
+	</td>
+  </tr>
+  <tr>
+    <td>57. Target some elements by tag name</td>
+    <td><br><input value="change all row color"type="button" onclick = "rowchange();"  ></td>
+	<td>
+<pre>
+function rowchange()
+	  {
+	   var table =  document.getElementById("content");
+	   var row = table.getElementsByTagName("tr");
+	    for (var i = 0; i < row.length; i++) 
+		{
+		row[i].style.color = "red";
+		
+		}
+	  }
+</pre>
+	</td>
+  </tr>
+  <tr>
+    <td>58. The DOM</td>
+    <td><img src="../images/htmltree.gif"></td>
+	<td>
+	</td>
+  </tr>
+  <tr>
+    <td>59. The DOM: Parents and children</td>
+    <td><img src="../images/DOMTree.png"></td>
+	<td>
+<pre>
+</pre>
+	</td>
+  </tr>
+  <tr id = "row10">
+    <td>60. The DOM: Finding children</td>
+    <td><br><input type="button" id="child"  onclick="child();" value="change this element child" ><br>wacth me grow</td>
+	<td>
+<pre>
+function child()
+	  {
+	  var tr = document.getElementById("row10");
+	  var td = tr.childNodes[3];
+	  td.style.fontSize="2em";
+	  }
+</pre>
+	</td>
+  </tr>
+ 
+  
+</table>
+		
+		</div>
+	</main>
+
+   <footer>
+     <br/>Designed by &copy;Emmannuel Sosa
+       <br/>
+		<a href="http://validator.w3.org/check?uri=referer" target="blank">
+			<img class="validator" src="../images/html5.png" alt="html5_validator"/>
+		</a>
+		<a href="http://jigsaw.w3.org/css-validator/check/referer" target="blank">
+			<img class="validator" src="../images/css3.png" alt="css_validator"/>
+		</a>
+   </footer>
+   </body>
+</html>

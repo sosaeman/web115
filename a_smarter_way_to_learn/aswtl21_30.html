@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+  <head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" type="text/css" href="../styles/aswtl.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	   <!-- googlefonts-->
+	 <link href='https://fonts.googleapis.com/css?family=Black+Ops+One|Luckiest+Guy|Sonsie+One|Shojumaru&effect=3d|3d-float|anaglyph|brick-sign|canvas-print|
+            crackle|decaying|destruction|distressed|distressed-wood|emboss|fire|fire-animation|fragile|grass|ice|mitosis|neon|outline|putting-green|
+            scuffed-steel|shadow-multiple|splintered|static|stonewash|vintage|wallpaper' 
+            rel='stylesheet' type='text/css'>
+	   <title>
+			Table of content Page 21-30
+	   </title>
+	   <script>
+function upcase()
+{
+	var uppercase = document.getElementById("uppercase").value;
+	document.getElementById("answer21").innerHTML= uppercase.toUpperCase();
+	
+}
+function randomcase()
+{
+	var rancase = document.getElementById("randomcase").value;
+	var somecase = rancase.slice(0,3);
+	var othercase =rancase.slice(3);
+	var firstchar = somecase.toUpperCase();
+	var otherchar=othercase.toLowerCase();
+	document.getElementById("answer22").innerHTML = firstchar + otherchar;
+}
+
+function stringFind()
+{
+var text = document.getElementById("findString").value;
+var change = text.indexOf("dog");
+
+
+if (change !== -1)
+	{
+		text = text.slice(0,change)+ "cat" + text.slice(change,3);	
+	}
+	document.getElementById("answer23").innerHTML= text;
+}
+function findLocation()
+{
+var name = document.getElementById("location").value;
+document.getElementById("answer24").innerHTML="your name start with an " + name.charAt(0);
+
+}
+function replaceChar()
+{
+var text = document.getElementById("replace").value;
+var newText = text.replace(/a/g,"z");
+
+document.getElementById("answer25").innerHTML= newText;	
+}	
+
+function math()
+{
+var number = document.getElementById("roundNum").value;
+var newNum = Math.round(number);
+document.getElementById("answer26").innerHTML=newNum;
+} 
+
+
+
+function random()
+{
+document.getElementById("answer27").innerHTML =Math.round( Math.random()*100);
+} 
+
+function newage()
+{
+var old = document.getElementById("age").value;
+document.getElementById("answer28").innerHTML= parseInt(old) + 10;
+} 
+
+function convertsn()
+{
+var con = document.getElementById("convert").value;
+document.getElementById("answer29").innerHTML= Number(con) + "\n" + con.toString();
+}
+
+function fixedD()
+{
+var dec = document.getElementById("decimal").value;
+var newdec = parseFloat(dec).toFixed(2);
+document.getElementById("answer30").innerHTML =  newdec;
+}
+	   </script>
+  </head>
+  <body>
+    <header>
+		<h1>WEB 115</h1>
+		<h2>A Smarter Way To Learn Chapters 21-30</h2>
+	</header>
+	<main>
+		<div>
+		<table id = "content">
+		<tr>
+			<th>Chapter</th>
+			<th>Examples</th>
+		</tr
+  <tr>
+    <td>21.Changing case</td>
+    <td>.toLowerCase<br>.toUpperCase<br><input placeholder="change to all caps"id="uppercase"type="text"><input  type="button" value="submit" onclick ="upcase()"></td>
+	<td id ="answer21"></td>
+	</tr>
+  <tr>
+    <td>22.Strings: measuring length and extracting parts</td>
+    <td>.slice(0,3)<br><input placeholder="enter text" id="randomcase" type="text"><input  type="button" value="submit" onclick ="randomcase()"></td>
+	<td id="answer22"></td>
+  </tr>
+  <tr>
+    <td>23.Strings: finding segments</td>
+    <td>.indexOf()<br>type in a sentence with the word dog and wacth it change to cat<input placeholder="enter text" id="findString" type="text"><input  type="button" value="submit" onclick ="stringFind()"></td>
+    <td id = "answer23"></td>
+  </tr>
+  <tr>
+    <td>24.Strings: finding a character at a location</td>
+    <td>.charAt()<br>Input your name.Output the first letters.<input placeholder="enter text" id="location" type="text"><input  type="button" value="submit" onclick ="findLocation()"></td>  
+	<td id = "answer24"></td>
+  </tr>
+  <tr>
+    <td>25. Strings: replacing characters</td>
+    <td>.replace<br>type a sentence with the letter a and wacth it change to z <input placeholder="enter text" id="replace" type="text"><input  type="button" value="submit" onclick ="replaceChar()">.</td>
+    <td id = "answer25"></td>
+  </tr>
+  <tr>
+    <td>26. Rounding numbers</td>
+    <td>Math.round()<br>Enter a decimal <br><input placeholder="enter text" id="roundNum" type="text"><input  type="button" value="submit" onclick ="math()"></td>
+    <td id = "answer26"></td>
+  </tr>
+  <tr>
+    <td>27.Generating random numbers</td>
+    <td>Math.random()<br><input  type="button" value="submit" onclick ="random()"></td>
+    <td id = "answer27"></td>
+  </tr>
+  <tr>
+    <td>28.Converting strings to integers and decimals</td>
+    <td>parseInt()<br>ParseFloat()<br>In 10yr you will be:<input placeholder="enter age" id="age" type="text"><input  type="button" value="submit" onclick ="newage()"></td>
+    <td id = "answer28"></td>
+  </tr>
+  <tr>
+    <td>29.Converting strings to numbers, numbers to strings</td>
+    <td>.toString()<br>number()<br><input placeholder="enter text" id="convert" type="text"><input  type="button" value="submit" onclick ="convertsn()"></td>
+    <td id = "answer29"></td>
+  </tr>
+  <tr>
+    <td>30.Controlling the length of decimals</td>
+    <td>toFixed()<br>type in a decimal <input placeholder="enter decimal" id="decimal" type="text"><input  type="button" value="submit" onclick ="fixedD()"></td>
+    <td id = "answer30"></td>
+  </tr>
+</table>
+		
+		</div>
+	</main>
+
+   <footer>
+     <br/>Designed by &copy;Emmannuel Sosa
+       <br/>
+		<a href="http://validator.w3.org/check?uri=referer" target="blank">
+			<img class="validator" src="../images/html5.png" alt="html5_validator"/>
+		</a>
+		<a href="http://jigsaw.w3.org/css-validator/check/referer" target="blank">
+			<img class="validator" src="../images/css3.png" alt="css_validator"/>
+		</a>
+   </footer>
+   </body>
+</html>

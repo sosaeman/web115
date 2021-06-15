@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en">
+  <head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" type="text/css" href="../styles/aswtl.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	    <!-- googlefonts-->
+	 <link href='https://fonts.googleapis.com/css?family=Black+Ops+One|Luckiest+Guy|Sonsie+One|Shojumaru&effect=3d|3d-float|anaglyph|brick-sign|canvas-print|
+            crackle|decaying|destruction|distressed|distressed-wood|emboss|fire|fire-animation|fragile|grass|ice|mitosis|neon|outline|putting-green|
+            scuffed-steel|shadow-multiple|splintered|static|stonewash|vintage|wallpaper' 
+            rel='stylesheet' type='text/css'>
+	   <title>
+			Table of content Page 61-70
+	   </title>
+	   <script>
+	 function ntype()
+	 {
+	  var node= document.getElementById("content");
+	  var child= node.childNodes[1].childNodes[2].childNodes[3];
+	  child.innerHTML="target node"
+	 }
+	 function listing()
+	 {
+		var d= document.getElementById("list");
+		var t=d.childNodes[1];
+		t.innerHTML="change child node";
+	 }
+	 function nodecheck()
+	 {
+	 var node= document.getElementById("content");
+	  var child= node.childNodes[1].childNodes[2].childNodes[3];
+	  document.getElementById("nodename").innerHTML=child.nodeName;
+	  
+	 }
+	 function ecount()
+	 {
+	var parentNode = document.getElementById("list2");
+	var nodeList = parentNode.childNodes;
+	var howManyKids = nodeList.length;
+	document.getElementById("ecount").innerHTML=howManyKids  ;
+}
+	function attribute()
+		{
+		var d= document.getElementById("att")
+		var p= att.getAttribute("style");
+		document.getElementById("att2").innerHTML=p;
+		}
+		function batt()
+		{
+		var d=document.getElementById("input").attributes.length;
+		var d2=document.getElementById("input").attributes;
+		for(var i = 0; i < d; ++i)
+		{
+		var a=d2[i].nodeName;
+		document.getElementById("tags").innerHTML += i+"." + a +"  ";
+		}
+		}
+		function addnode()
+		{
+		var d=document.getElementById("nodeadd");
+		var p= document.createElement("p");
+		var t= document.createTextNode("im a new node");
+		d.appendChild(p);
+		p.appendChild(t);
+		}
+			function addnode68()
+		{
+		var d=document.getElementById("list68");
+		var p= document.createElement("li");
+		var t= document.createTextNode("southpaw");
+		var firstchild=d.firstChild;
+		d.insertBefore(p,firstchild);
+		p.appendChild(t);
+		}
+		function object()
+		{
+		var car={make:"honda",year:2018,model:"civic"};
+		
+			document.getElementById("70").innerHTML="you have a "+car.year+" "+car.make+" "+car.model;
+		}
+		</script>
+  </head>
+  <body>
+    <header>
+		<h1>WEB 115</h1>
+		<h2>A Smarter Way To Learn Chapters 61-70</h2>
+	</header>
+	<main>
+		<div>
+		<table id = "content">
+		<tr>
+			<th>Chapter</th>
+			<th colspan="2">Examples</th>
+		</tr>
+  <tr>
+    <td>61. The DOM: Junk artifacts and nodeType</td>
+    <td><p id = "para">Lorem Ipsum: usage. Lorem ipsum is a pseudo text. It's a convenient tool for mock-ups.</p><br>
+	<input type="button"  value ="target this node"onclick="ntype();"></td>
+	<td>
+<pre>
+
+ function ntype()
+	 {
+	  var node= document.getElementById("content");
+	  var child= node.childNodes[1].childNodes[2].childNodes[3];
+	  child.innerHTML="target node"
+	 }
+</pre>
+	</td>
+  </tr>
+  <tr>
+    <td>62. The DOM: More ways to target elements</td>
+    <td><input type="button"   value="target the order list node" onclick="listing();">
+		<ol id="list">
+			<li>cake</li>
+			<li>body</li>
+			<li>seamless</li>
+		</ol>
+	</td>
+	<td>
+<pre>
+ function listing()
+	 {
+		var d= document.getElementById("list");
+		var t=d.childNodes[1];
+		t.innerHTML="change child node";
+	 }
+</pre>
+	</td>
+  </tr>
+  <tr>
+    <td>63. The DOM: Getting a target's name</td>
+    <td><input type="button"   value="get the node" onclick="nodecheck();"><p id="nodename"></p></td>
+	<td>
+	<pre>
+ function nodecheck()
+	 {
+	 var node= document.getElementById("content");
+	  var child= node.childNodes[1].childNodes[2].childNodes[3];
+	  document.getElementById("nodename").innerHTML=child.nodeName;
+	  
+	 }
+	 </pre>
+	</td>
+  </tr>
+  <tr>
+    <td>64. The DOM: Counting elements</td>
+    <td><input type="button" value="how many items are there" onclick="ecount();">
+		<ol id="list2"
+		><li
+			>cake
+			</li
+			><li
+			>body
+			</li
+			><li
+			>seamless
+			</li
+			></ol
+		><p id = "ecount"></p>
+	<td>
+<pre>
+ function ecount()
+	 {
+	var parentNode = document.getElementById("list2");
+	var nodeList = parentNode.childNodes;
+	var howManyKids = nodeList.length;
+	document.getElementById("ecount").innerHTML=howManyKids  ;
+}
+</pre>
+	</td>
+  </tr>
+  <tr>
+    <td id = "title">65. The DOM: Attributes</td>
+    <td><input type="button" value="get Attribute" onclick="attribute();"><br>
+	<p id = "att" style="font-size:2em;">Target the Attribute of this Paragraph</p>
+	<p id = "att2"></p></td>
+	</td>
+	<td>
+<pre>
+function attribute()
+		{
+		var d= document.getElementById("att")
+		var p= att.getAttribute("style");
+		document.getElementById("att2").innerHTML=p;
+		}
+</pre>
+	</td>
+  </tr>
+  <tr>
+    <td>66. The DOM: Attribute names and values</td>
+    <td><input value="how many attributes are on this button "type = "button" id="input" onclick ="batt();">
+	<p id = "tags"></p></td>
+	<td>
+<pre>
+
+		function batt()
+		{
+		var d=document.getElementById("input").attributes.length;
+		var d2=document.getElementById("input").attributes;
+		for(var i = 0; i < d; ++i)
+		{
+		var a=d2[i].nodeName;
+		document.getElementById("tags").innerHTML += i+"." + a +"  ";
+		}
+		}
+		
+</pre>
+	</td>
+  </tr>
+  <tr>
+    <td>67. The DOM: Adding nodes</td>
+    <td id="nodeadd"><br><input value="Add a node"type="button" onclick = "addnode();"  >
+	
+	</td>
+	<td>
+<pre>
+function addnode()
+		{
+		var d=document.getElementById("nodeadd");
+		var p= document.createElement("p");
+		var t= document.createTextNode("im a new node");
+		d.appendChild(p);
+		p.appendChild(t);
+		}
+</pre>
+	</td>
+  </tr>
+  <tr>
+    <td>68. The DOM: Inserting nodes</td>
+    <td id="nodeadd68"><br><input value="Add a node"type="button" onclick = "addnode68();"  >
+		<ol id="list68">
+			<li>cake</li>
+			<li>body</li>
+			<li>seamless</li>
+		</ol>
+	</td>
+	<td>
+	<pre>
+		function addnode68()
+		{
+		var d=document.getElementById("list68");
+		var p= document.createElement("li");
+		var t= document.createTextNode("southpaw");
+		var firstchild=d.firstChild;
+		d.insertBefore(p,firstchild);
+		p.appendChild(t);
+		}
+	</pre>
+	</td>
+  </tr>
+  <tr>
+    <td>69. Objects</td>
+    <td>
+		<pre>
+	var car=
+	{
+		make:"honda",
+		year:2018,
+		model:civic
+	};
+		</pre>
+	</td>
+	<td>
+
+	</td>
+  </tr>
+  <tr id = "row10">
+    <td>70. Objects: Properties</td>
+    <td><pre>
+	var car=
+	{
+		make:"honda",
+		year:2018,
+		model:civic
+	};
+		</pre><br><input type="button" id="o70"  onclick="object();" value="get object propertie" ><br><p id="70"></p></td>
+	<td>
+<pre>
+function object()
+		{
+		var car={make:"honda",year:2018,model:"civic"};
+		
+			document.getElementById("70").innerHTML="you have a "+car.year+" "+car.make+" "+car.model;
+		}
+</pre>
+	</td>
+  </tr>
+ 
+  
+</table>
+		
+		</div>
+	</main>
+
+   <footer>
+     <br/>Designed by &copy;Emmannuel Sosa
+       <br/>
+		<a href="http://validator.w3.org/check?uri=referer" target="blank">
+			<img class="validator" src="../images/html5.png" alt="html5_validator"/>
+		</a>
+		<a href="http://jigsaw.w3.org/css-validator/check/referer" target="blank">
+			<img class="validator" src="../images/css3.png" alt="css_validator"/>
+		</a>
+   </footer>
+   </body>
+</html>

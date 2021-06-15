@@ -1,0 +1,48 @@
+header
+{
+	font-family:Comic Sans MS, cursive, sans-serif;
+	text-align:center;
+	color:rgb(40,40,40);
+	background: linear-gradient(to top, #a9a9a9 0%, #ffffff 100%);
+}
+footer
+{
+	background: linear-gradient(to bottom, #ffffff 15%, #282828 100%);
+	color:rgb(40,40,40);	
+	font-family:Comic Sans MS, cursive, sans-serif;
+	text-align:center;
+}
+
+
+img.validator
+{
+	width:5%;
+}
+main
+{
+	background-color:white;
+	margin:50px;
+	font-family: 'Permanent Marker', cursive;
+	font-size:20px;
+}
+td 
+{
+	border:1px solid black;
+	
+}
+th
+{
+	border:1px solid black;
+	background: linear-gradient(to top, #a9a9a9 0%, #ffffff 100%);
+}
+tr:hover
+{
+	background-color:lightgrey;
+}
+table
+{
+	width:80%;
+	margin:0 auto;
+}
+
+

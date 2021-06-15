@@ -1,0 +1,61 @@
+header,footer
+{
+	font-family:Comic Sans MS, cursive, sans-serif;
+	text-align:center;
+	color:rgb(40,40,40);
+background: linear-gradient(to top, #a9a9a9 0%, #ffffff 100%);
+}
+footer
+{
+background-color:		rgb(40,40,40);
+color:white;	
+}
+.stone{
+	position:relative;
+}
+
+img.validator
+{
+	width:5%;
+}
+
+.dumbell img
+{
+	width:200px;
+	height:200px;
+}
+section
+{
+	background-color:grey;
+	overflow:scroll;
+	width:700px;
+	height:500px;
+	margin:0 auto
+}
+
+blockquote {
+    background: #eee;
+    border-radius: 10px;
+	box-shadow:2px 3px 4px;
+}
+#hr
+{
+	border: 3px solid black;
+}
+table,tr
+{width:100%;
+	margin:100px auto;
+	border:1px solid black;
+	text-align:center;
+	
+}
+th
+{
+	box-shadow:0px 0px 5px 5px;
+	
+}
+td:hover
+{
+transform:scale(1.5);
+border:1px solid black;	
+}
